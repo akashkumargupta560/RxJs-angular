@@ -1,0 +1,15 @@
+<div class="dynemic-promise">
+    <h3>Images</h3>
+    <div class="images-page">
+        <div class="image" *ngFor="let data of paginationData">
+             <img [src]="data.thumbnailUrl" alt="data.title"/>
+             <title>{{data.title}}</title>
+             <a [href]="data.url" target="_blank">View Full Image</a>
+        </div>
+    </div>
+    <div class="pagination">
+        <button type="button" (click)="prevPage()" [disabled]="currentPage ===1">Previous</button>
+        <span> {{currentPage}} </span>
+        <button type="button" (click)="nextPage()" [disabled]="currentPage >= value.length/itemsPerPages">Next</button>
+    </div>
+</div>

@@ -5,10 +5,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UsersService {
-  private apiUrl = 'https://api.example.com/data';
+  private apiUrl ='https://jsonplaceholder.typicode.com/photos?_limit=100';
   constructor(private http:HttpClient) { }
 
-  getDetails(){
-    
+  fetchDetails():Promise<any>{
+    return this.http.get<any>(this.apiUrl).toPromise();
   }
 }

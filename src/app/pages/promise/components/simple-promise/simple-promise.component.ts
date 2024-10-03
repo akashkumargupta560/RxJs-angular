@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {UserTypes}  from '../../../../models/dataType'
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-simple-promise',
   templateUrl: './simple-promise.component.html',
@@ -9,8 +10,10 @@ export class SimplePromiseComponent implements OnInit{
 
   promiseValue:any;
   userValues:any;
-  constructor(){}
-
+  constructor(private route:Router){}
+  backHome(){
+    this.route.navigate(['/promise'])
+  }
    userDetails:UserTypes[] =[
     {
       'fullname':'akash gupta',
@@ -57,10 +60,10 @@ export class SimplePromiseComponent implements OnInit{
     });
 
     buyLaptop.then(res=>{
-      console.log('Success',res);
+      //console.log('Success',res);
       this.promiseValue=res;
     }).catch((err)=>{
-      console.log('Catch code =>',err)
+      //console.log('Catch code =>',err)
       this.promiseValue = err;
     });
 
@@ -74,7 +77,7 @@ export class SimplePromiseComponent implements OnInit{
     }
   });
   userData.then(res=>{
-    console.log('Success',res);
+    //console.log('Success',res);
     this.userValues=res;
   }).catch(err=>{
     this.userValues = err;
