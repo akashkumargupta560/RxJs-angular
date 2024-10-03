@@ -1,16 +1,38 @@
 import { Component, OnInit } from '@angular/core';
-
+import {UserTypes}  from '../../../../models/dataType'
 @Component({
   selector: 'app-simple-promise',
   templateUrl: './simple-promise.component.html',
   styleUrls: ['./simple-promise.component.scss']
 })
 export class SimplePromiseComponent implements OnInit{
+
   promiseValue:any;
+  userValues:any;
   constructor(){}
 
+   userDetails:UserTypes[] =[
+    {
+      'fullname':'akash gupta',
+      'username':'gupta@1',
+      'email':'gupta1@gmail.com',
+      'phone':98765342,
+      'gender':'male',
+      'address':[
+        {
+          'Hsno':1623,
+          'street':'pcl road',
+        },
+        {
+          'landmark':'near narayan mandir'
+        }
+      ]
+    },
+  ]
+
   mackBook(){
-   return true;
+   return false;
+   //return true;
   }
   hpLaptop(){
     return false
@@ -40,6 +62,24 @@ export class SimplePromiseComponent implements OnInit{
     }).catch((err)=>{
       console.log('Catch code =>',err)
       this.promiseValue = err;
-    })
+    });
+
+
+    ////Using Object Method
+   let userData = new Promise((resolve, reject) =>{
+    if(this.userDetails){
+       resolve(this.userDetails)
+    }else{
+       reject('User Details Not Found!')
+    }
+  });
+  userData.then(res=>{
+    console.log('Success',res);
+    this.userValues=res;
+  }).catch(err=>{
+    this.userValues = err;
+  })
+
   }
+  
 }

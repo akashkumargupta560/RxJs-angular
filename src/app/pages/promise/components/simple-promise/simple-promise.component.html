@@ -1,2 +1,51 @@
-<p>simple-promise works!</p>
-<p>{{promiseValue}}</p>
+
+<div class="promises-page" >
+    <div class="simple-call call">
+        <h4>Simple Call Using setTimeout Method</h4>
+        <p>{{promiseValue}}</p>
+    </div>
+    <div class="object-call call">
+        <h4>Simple Call Using Object Data Method</h4>
+        <ng-container *ngFor="let value of userValues">
+            <div class="col-1">
+                <span>Fullname:-{{value?.fullname}}</span>
+                <span>Username:-{{value.username}}</span>
+            </div>
+            <div class="col-2">
+                <span>Gender:-{{value.gender}}</span>
+                <span>Mobile:-{{value.spanhone}}</span>
+            </div>
+            <p>Email:-{{value.email}}</p>
+
+            <div class="col-3" *ngFor="let data of value.address">
+            
+                <div class="">
+                    <span>House-no:-</span>
+                    <span>Street:-</span>
+                    <span>Landmark:-</span>
+                </div>
+                <div class="">
+                    <span>{{data.Hsno}}</span>
+                    <span>{{data.street}}</span>
+                    <span>{{data.landmark}}</span>
+                </div>
+            </div>
+            
+            <!-- <p >
+                Address:-<br>
+                <ng-container >
+                    <div class="col-3" *ngFor="let data of value.address">
+                        <p>House-no:-{{data.Hsno}}</p>
+                        <p>Street:-{{data.street}}</p>
+                        <p>Landmark:-{{data.landmark}}</p>
+                    </div>
+                    
+                </ng-container>
+               
+            </p> -->
+        </ng-container>
+    </div>
+    <div class="simple-call">
+        <p>{{promiseValue}}</p>
+    </div>
+</div>
