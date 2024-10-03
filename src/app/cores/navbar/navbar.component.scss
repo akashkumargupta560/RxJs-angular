@@ -1,0 +1,22 @@
+::ng-deep{
+   .navbar-page{
+    background-color: blueviolet;
+    border-radius: 10px;
+    border: 1px solid blueviolet;
+    color: #fff;
+    font-size: 18px;
+    font-family: sans-serif;
+        .all-tabs ul{
+            margin: 6px -9px;
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+            .tabs,.auth-tabs,a{
+                display: flex;
+                column-gap: 15px;
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+   } 
+}
