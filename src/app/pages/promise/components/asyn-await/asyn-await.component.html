@@ -1,3 +1,22 @@
-<web-card title="Card Title 1" buttonLabel="Action 1" (buttonClick)="handleButtonClick()">
-    <p>This is the content of card 1.</p>
-</web-card>
+<back-button label="Back"></back-button>
+<div class="asyn-await-page">
+    <h3>Asyn/Await</h3>
+    <div class="card-page">
+        <web-card [title]="titlePromise" buttonLabel="Promise-button" (ButtonClick)="fetch1()">
+            <ng-container *ngFor="let datas of receiveValue">
+                <span>Brand:-{{datas.brand}}</span><br>
+                <span>Brand:-{{datas.price}}</span><br>
+                <span>Brand:-{{datas.color}}</span><br><br>
+            </ng-container>
+            <!-- <p>{{receiveValue}}</p> -->
+        </web-card>
+        <web-card [title]="titleAsync" buttonLabel="Action 1" (ButtonClick)="handleButtonClick()">
+            <p>This is the content of card 1.</p>
+        </web-card>
+        <web-card [title]="titleAsyncPromise" buttonLabel="Action 1" (ButtonClick)="handleButtonClick()">
+            <p>This is the content of card 1.</p>
+        </web-card>
+    </div>
+</div>
+
+

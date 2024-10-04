@@ -9,13 +9,11 @@ import { Router } from '@angular/router';
 export class SimplePromiseComponent implements OnInit{
 
   label = "Back"
-  
+
   promiseValue:any;
   userValues:any;
   constructor(private route:Router){}
-  backHome(){
-    this.route.navigate(['/promise'])
-  }
+
    userDetails:UserTypes[] =[
     {
       'fullname':'akash gupta',

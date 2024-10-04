@@ -10,7 +10,7 @@ export class CardComponent {
   @Input() title:string | undefined;
   @Input() buttonLabel:string | undefined;
 
-  @Output() ButtonClick = new EventEmitter<void>();
+  @Output() ButtonClick = new EventEmitter<any>();
 
   constructor(){}
   ngOnInit():void{}
@@ -18,5 +18,5 @@ export class CardComponent {
   onButtonClick(){
     this.ButtonClick.emit();
   }
-
+ 
 }

@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./promise.component.scss']
 })
 export class PromiseComponent {
-
+  title='Title-card'
+  handleButtonClick(){}
 }

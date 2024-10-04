@@ -20,4 +20,15 @@ export class OnlyPromiseComponent {
       console.log(err)
     })
   }
+
+  tableHeaders = ['Name', 'Age', 'Occupation'];
+  tableData = [
+    { Name: 'Alice', Age: 30, Occupation: 'Engineer' },
+    { Name: 'Bob', Age: 25, Occupation: 'Designer' },
+    { Name: 'Charlie', Age: 35, Occupation: 'Teacher' }
+  ];
+
+  handleRowClick(row: any) {
+    console.log('Row clicked:', row); // Handle the row click event
+  }
 }
