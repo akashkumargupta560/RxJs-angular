@@ -6,6 +6,7 @@ import { OnlyPromiseComponent } from './components/only-promise/only-promise.com
 import { SimplePromiseComponent } from './components/simple-promise/simple-promise.component';
 import { DynemicPromiseComponent } from './components/dynemic-promise/dynemic-promise.component';
 import { AsynAwaitComponent } from './components/asyn-await/asyn-await.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 const routes: Routes=[
   {
@@ -35,6 +36,7 @@ const routes: Routes=[
   ],
   imports: [
     CommonModule,
+    SharedModule,
     RouterModule.forChild(routes)
   ]
 })

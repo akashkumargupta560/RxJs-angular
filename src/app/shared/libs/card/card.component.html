@@ -1,0 +1,23 @@
+<div class="card">
+    <div class="comman-card">
+        <div class="content">
+            <h3>Dynemic(API) Promise</h3>
+            <a routerLink="dynemic-promise"><button>Click Here</button></a>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="comman-card">
+        <div class="card-header">
+            <h2>{{ title }}</h2>
+          </div>
+          <div class="card-body">
+            <ng-content></ng-content>
+          </div>
+          <div class="card-footer">
+            <button (click)="onButtonClick()">{{ buttonLabel }}</button>
+            <!-- <a routerLink="dynemic-promise"><button>Click Here</button></a> -->
+          </div>
+    </div>
+</div>

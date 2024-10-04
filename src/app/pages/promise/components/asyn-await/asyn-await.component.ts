@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AsynAwaitComponent {
 
+  constructor(){}
+
+  ngOnInit():void{}
+
+  handleButtonClick() {
+    console.log('Card button clicked!');
+    // Additional logic can go here
+  }
 }

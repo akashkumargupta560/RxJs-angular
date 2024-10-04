@@ -1,18 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from './libs/button/button.component';
-import { CurrencyPipe } from './pipes/currency/currency.pipe';
+import { BackButtonComponent } from './libs/back-button/back-button.component';
+import { CardComponent } from './libs/card/card.component';
 
 
 
 @NgModule({
   declarations: [
-    // CurrencyPipe,
-    ButtonComponent
+    ButtonComponent,
+    BackButtonComponent,
+    CardComponent,
   ],
   imports: [
     CommonModule,
   ],
-  exports:[ButtonComponent]
+  exports:[
+    ButtonComponent,
+    BackButtonComponent,
+    CardComponent
+  ]
 })
 export class SharedModule { }
