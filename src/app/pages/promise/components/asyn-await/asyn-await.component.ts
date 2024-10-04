@@ -11,7 +11,9 @@ export class AsynAwaitComponent {
   titleAsyncPromise='Exam:-(3) With Fetch API';
   promise:any
   buyLaptop:any;
+  buyCars:any;
   receiveValue:any;
+  receiveValues:any
   constructor(){
 
     this.promise = new Promise( (resolve,reject) =>{
@@ -28,13 +30,21 @@ export class AsynAwaitComponent {
       'hardDisk':'512 GB',
     },
   ]
+  carDetail=[
+    {
+      'brand':'Audi',
+      'color':'gray',
+      'price':5500000,
+      'average':'20km/h'
+    },
+  ]
 
   ngOnInit():void{
     this.logData();
     this.promisData();
     this.getValues();
     this.examPromise();
-   
+    this.examAsyncAwait();
   }
   
   
@@ -69,7 +79,7 @@ export class AsynAwaitComponent {
     })
   }
 
-  /////////////////1st Example with Promise
+  ///////////////// Example with Promise COMMON FUNCTION///////////////
    examPromise(){
     this.buyLaptop = new Promise((resolve,reject) =>{
        setTimeout(()=>{
@@ -77,6 +87,14 @@ export class AsynAwaitComponent {
        },3000)
     })
    }
+   examAsyncAwait(){
+    this.buyCars = new Promise((resolve,reject) =>{
+       setTimeout(()=>{
+        resolve(this.carDetail)
+       },3000)
+    })
+   }
+   /////////////////1st Example with Promise
   fetch1(){
     this.buyLaptop?.then((res:any)=>{
       // this.receiveValue=JSON.stringify(res);
@@ -84,5 +102,14 @@ export class AsynAwaitComponent {
       console.log('dsfsdjgb',res);
     })
   }
+
+   /////////////////2nd Example with Async/Await
+
+   async fetch2(){
+    this.receiveValues = await this.buyCars
+    console.log('Async/Await Data',this.receiveValue)
+   }
+
+   /////////////////3rd Example with Fetch API
  
 }

@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class PromiseComponent {
   title='Title-card'
-  handleButtonClick(){}
+  
 }
