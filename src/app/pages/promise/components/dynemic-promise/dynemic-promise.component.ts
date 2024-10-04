@@ -10,7 +10,6 @@ export class DynemicPromiseComponent {
 
 
   value:any[] =[];
-  // limitedData: any[] = [];
   currentPage = 1;
   itemsPerPages =10; //Number of image per page
   constructor(private userSrv:UsersService){}

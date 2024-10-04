@@ -2,9 +2,11 @@
     <h3>Images</h3>
     <div class="images-page">
         <div class="image" *ngFor="let data of paginationData">
-             <img [src]="data.thumbnailUrl" alt="data.title"/>
-             <title>{{data.title}}</title>
-             <a [href]="data.url" target="_blank">View Full Image</a>
+             <!-- <img [src]="data.thumbnailUrl" alt="data.title"/> -->
+             <img [src]="data.image" alt="data.title" width="90" height="70"/><br>
+             <span>{{data.category}}</span><br>
+             <span>{{data.price | currency:'INR'}}</span>
+             <!-- <a [href]="data.url" target="_blank">View Full Image</a> -->
         </div>
     </div>
     <div class="pagination">

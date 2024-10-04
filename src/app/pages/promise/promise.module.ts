@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { OnlyPromiseComponent } from './components/only-promise/only-promise.component';
 import { SimplePromiseComponent } from './components/simple-promise/simple-promise.component';
 import { DynemicPromiseComponent } from './components/dynemic-promise/dynemic-promise.component';
+import { AsynAwaitComponent } from './components/asyn-await/asyn-await.component';
 
 const routes: Routes=[
   {
@@ -19,6 +20,9 @@ const routes: Routes=[
   {
     path:'dynemic-promise', component:DynemicPromiseComponent
   },
+  {
+    path:'asyn-await', component:AsynAwaitComponent
+  },
 ]
 
 @NgModule({
@@ -26,7 +30,8 @@ const routes: Routes=[
     PromiseComponent,
     OnlyPromiseComponent,
     SimplePromiseComponent,
-    DynemicPromiseComponent
+    DynemicPromiseComponent,
+    AsynAwaitComponent
   ],
   imports: [
     CommonModule,

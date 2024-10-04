@@ -11,6 +11,10 @@ import { CoresModule } from './cores/cores.module';
 import { ObservableModule } from './pages/observable/observable.module';
 import { PromiseModule } from './pages/promise/promise.module';
 import { HttpClientModule} from '@angular/common/http';
+import { SharedModule } from './shared/shared.module';
+
+
+
 
 @NgModule({
   declarations: [
@@ -21,12 +25,14 @@ import { HttpClientModule} from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    // SharedModule,
     DashboardModule,
     HomeModule,
     ProfileModule,
     ObservableModule,
     PromiseModule,
-    CoresModule
+    CoresModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
