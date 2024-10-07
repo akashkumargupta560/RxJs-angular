@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ObservableComponent } from './observable.component';
 import { Routes, RouterModule } from '@angular/router';
+import { AllComponent } from './components/all/all.component';
+import { FromEventComponent } from './components/from-event/from-event.component';
 
 const routes: Routes=[
   {
@@ -11,7 +13,9 @@ const routes: Routes=[
 
 @NgModule({
   declarations: [
-    ObservableComponent
+    ObservableComponent,
+    AllComponent,
+    FromEventComponent
   ],
   imports: [
     CommonModule,
