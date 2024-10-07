@@ -14,6 +14,7 @@ export class AsynAwaitComponent {
   buyCars:any;
   receiveValue:any;
   receiveValues:any
+  apiValue:any;
   constructor(){
 
     this.promise = new Promise( (resolve,reject) =>{
@@ -52,11 +53,6 @@ export class AsynAwaitComponent {
   async getValues(){
     let response = await this.promise;
     //console.log('sfsdf',response)
-  }
-
-  handleButtonClick() {
-    //console.log('Card button clicked!');
-    // Additional logic can go here
   }
    
   ////Using async/await   ///async keyword with function always return promise
@@ -99,7 +95,7 @@ export class AsynAwaitComponent {
     this.buyLaptop?.then((res:any)=>{
       // this.receiveValue=JSON.stringify(res);
       this.receiveValue=res;
-      console.log('dsfsdjgb',res);
+      console.log('With Promise',res);
     })
   }
 
@@ -110,6 +106,29 @@ export class AsynAwaitComponent {
     console.log('Async/Await Data',this.receiveValue)
    }
 
-   /////////////////3rd Example with Fetch API
- 
+   /////////////////3rd Example with Fetch API https://jsonplaceholder.typicode.com/posts
+   //private fetchApi ='https://jsonplaceholder.typicode.com/posts';
+
+   private fetchApi = fetch('https://jsonplaceholder.typicode.com/posts?_limit=10')
+                     .then(resppnse =>resppnse.json());
+////Using Promises
+  //  fetch3(){
+  //   this.fetchApi.then(res=>{
+  //     console.log('api fetching with promises',res);
+  //     this.apiValue = res;
+  //    // this.apiValue = JSON.stringify(res);
+  //   })
+  //  }
+
+  ////Using Async/Await
+   async fetch3(){
+    // this.fetchApi.then(res=>{
+    //   console.log('api fetching',res);
+    //   this.apiValue = res;
+    //  // this.apiValue = JSON.stringify(res);
+    // })
+     this.apiValue = await this.fetchApi;
+    console.log('api fetching with asunc/await',this.apiValue);
+   }
+
 }

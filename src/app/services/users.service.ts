@@ -7,6 +7,7 @@ import { Injectable } from '@angular/core';
 export class UsersService {
   // private apiUrl ='https://jsonplaceholder.typicode.com/photos?_limit=100';
   private apiUrl ='https://fakestoreapi.com/products'
+  private fetchApi ='https://jsonplaceholder.typicode.com/posts'
   constructor(private http:HttpClient) { }
 
   fetchDetails():Promise<any>{

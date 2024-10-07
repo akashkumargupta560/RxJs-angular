@@ -7,8 +7,21 @@
         
     }
     .card-page{
-        // display: flex;
-        //width: fit-content;
+        display: flex;
+        justify-content: space-around;
+        web-card{
+            max-height: 200px;    
+            overflow-y: auto;    
+            //width: 1200px;
+            .truncate {
+                display: block;         
+                width: 200px;          
+                white-space: nowrap;   
+                overflow: hidden;     
+                text-overflow: ellipsis;
+            }
+         
+        }
     }
     
 }

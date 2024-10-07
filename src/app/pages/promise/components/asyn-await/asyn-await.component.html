@@ -17,8 +17,11 @@
                 <span>Brand:-{{datas.color}}</span><br><br>
             </ng-container>
         </web-card>
-        <web-card [title]="titleAsyncPromise" buttonLabel="Action 1" (ButtonClick)="handleButtonClick()">
-            <p>This is the content of card 1.</p>
+        <web-card [title]="titleAsyncPromise" buttonLabel="API-Button" (ButtonClick)="fetch3()" class="cards-body">
+            <ng-container *ngFor="let datas of apiValue">
+                <span class="title truncate">Title:-{{datas.title}}</span><br>
+                <span class="title truncate">Discri:-{{datas.body}}</span><br><br>
+            </ng-container>
         </web-card>
     </div>
 </div>
