@@ -2,23 +2,33 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ObservableComponent } from './observable.component';
 import { Routes, RouterModule } from '@angular/router';
-import { AllComponent } from './components/all/all.component';
+// import { ListComponent } from './components/list/list.component';
 import { FromEventComponent } from './components/from-event/from-event.component';
+import { ListComponent } from './components/list/list.component';
+import { SharedModule } from 'src/app/shared/shared.module';
+
 
 const routes: Routes=[
   {
-    path:'', component:ObservableComponent
+    path:'observable', component:ObservableComponent
+  },
+  {
+    path:'', component:ListComponent
+  },
+  {
+    path:'from-event', component:FromEventComponent
   }
 ]
 
 @NgModule({
   declarations: [
     ObservableComponent,
-    AllComponent,
+    ListComponent,
     FromEventComponent
   ],
   imports: [
     CommonModule,
+    SharedModule,
     RouterModule.forChild(routes)
   ]
 })

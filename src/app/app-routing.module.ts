@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ObservableComponent } from './pages/observable/observable.component';
+import { ListComponent } from './pages/observable/components/list/list.component';
+import { FromEventComponent } from './pages/observable/components/from-event/from-event.component';
 
 const routes: Routes = [
   {
@@ -25,6 +28,18 @@ const routes: Routes = [
     path:'observable',
     loadChildren:() => import('./pages/observable/observable.module').then((m)=>m.ObservableModule)
   },
+  // {
+  //   path:'observable', component:ObservableComponent,
+  //   children:[
+  //     {
+  //       path:'list', component:ListComponent
+  //     },
+  //     {
+  //       path:'from-event', component:FromEventComponent
+  //     },
+  //   ]
+    
+  // },
 ];
 
 @NgModule({
