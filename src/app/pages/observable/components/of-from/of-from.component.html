@@ -1,0 +1,60 @@
+<back-button label="Back"></back-button>
+<div class="of-from-page">
+    <h3>From-Event Page</h3>
+    <p>To create stream from <strong>from-event Observable</strong></p>
+    <div class="">
+        <strong>Ex- 01 (OF)</strong>
+        <hr>
+        <div class="of-from">
+            <div class="">
+                <p class="data-view">
+                    <strong>Data:</strong> <b>of</b>('Anup','Shekhar','Sharma')
+                </p>
+                <hr>
+                <ul id="elContainer"></ul>
+            </div>
+            <div class="">
+                <p class="data-view">
+                    <strong>Data:</strong> <b>of</b>(&#123; a:'Anup', b:'Shekhar', c:'Sharma'&#125;)
+                </p>
+                <hr>
+                <ol>
+                    <li><strong>a :</strong>{{obMsg.a}}</li>
+                    <li><strong>b :</strong>{{obMsg.b}}</li>
+                    <li><strong>c :</strong>{{obMsg.c}}</li>
+                </ol>
+            </div>
+        </div>
+    </div><br>
+    <div class="">
+        <strong>Ex- 02 (From)</strong>
+        <hr>
+       
+        <div class="of-from">
+            <div class="">
+                <strong>Array</strong>
+                <p class="data-view">
+                    <strong>Data:</strong> <b>from</b>(['Angular','Reactjs','Laravel'])
+                </p>
+                <hr>
+                <ol id="elContainer-fromArray"></ol>
+            </div>
+            <div class="">
+                <strong>Promise</strong>
+                <p class="data-view">
+                    <strong>Data:</strong>Promise to Observable
+                </p>
+                <hr>
+                <ol id="elContainer-fromPromise"></ol>
+            </div>
+            <div class="">
+                <strong>String</strong>
+                <p class="data-view">
+                    <strong>Data:</strong> String to Observable
+                </p>
+                <hr>
+                <ol id="elContainer-fromString"></ol>
+            </div>
+        </div>
+    </div>
+</div>

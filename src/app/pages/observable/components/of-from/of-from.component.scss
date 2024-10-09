@@ -1,0 +1,14 @@
+.of-from-page{
+    h3{
+        text-align: center;
+    }
+    .of-from{
+        display: flex;
+        column-gap: 20px;
+        .data-view{
+            border: 1px solid lightblue;
+            padding: 15px 15px;
+            border-radius: 10px;
+        }
+    }
+}

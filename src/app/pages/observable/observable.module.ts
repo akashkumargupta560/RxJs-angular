@@ -6,6 +6,7 @@ import { FromEventComponent } from './components/from-event/from-event.component
 import { ListComponent } from './components/list/list.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { IntervalComponent } from './components/interval/interval.component';
+import { OfFromComponent } from './components/of-from/of-from.component';
 
 
 const routes: Routes=[
@@ -19,8 +20,11 @@ const routes: Routes=[
     path:'from-event', component:FromEventComponent
   },
   {
-    path:'interval', component:IntervalComponent
+    path:'interval-timer', component:IntervalComponent
   },
+  {
+    path:'of-from', component:OfFromComponent
+  }
 ]
 
 @NgModule({
@@ -28,7 +32,8 @@ const routes: Routes=[
     ObservableComponent,
     ListComponent,
     FromEventComponent,
-    IntervalComponent
+    IntervalComponent,
+    OfFromComponent
   ],
   imports: [
     CommonModule,
