@@ -7,14 +7,15 @@ import { ListComponent } from './components/list/list.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { IntervalComponent } from './components/interval/interval.component';
 import { OfFromComponent } from './components/of-from/of-from.component';
+import { ToArrayComponent } from './components/to-array/to-array.component';
 
 
 const routes: Routes=[
   {
-    path:'observable', component:ObservableComponent
+    path:'', component:ObservableComponent
   },
   {
-    path:'', component:ListComponent
+    path:'fd', component:ListComponent
   },
   {
     path:'from-event', component:FromEventComponent
@@ -24,6 +25,9 @@ const routes: Routes=[
   },
   {
     path:'of-from', component:OfFromComponent
+  },
+  {
+    path:'toArray', component:ToArrayComponent
   }
 ]
 
@@ -33,7 +37,8 @@ const routes: Routes=[
     ListComponent,
     FromEventComponent,
     IntervalComponent,
-    OfFromComponent
+    OfFromComponent,
+    ToArrayComponent
   ],
   imports: [
     CommonModule,
