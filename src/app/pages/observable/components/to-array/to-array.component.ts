@@ -28,7 +28,7 @@ export class ToArrayComponent {
       toArray()
     ).
     subscribe(res=>{
-      console.log(res);
+      //console.log(res);
 
     });
 
@@ -37,14 +37,14 @@ export class ToArrayComponent {
     const source2 = from(this.users);
     source2.pipe(toArray())
     .subscribe(res =>{
-      console.log("from-array",res)
+      //console.log("from-array",res)
     })
 
     ///Example:- 3 using of operator
 
     const source3 = of('akash','vikash','rohit','mohit');
      source3.pipe(toArray()).subscribe(res=>{
-      console.log('sdf',res)
+      //console.log('sdf',res)
      })
                                                                                                                                                                                                                                                                                                                                                                                                        
   }

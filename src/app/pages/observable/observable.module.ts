@@ -8,6 +8,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { IntervalComponent } from './components/interval/interval.component';
 import { OfFromComponent } from './components/of-from/of-from.component';
 import { ToArrayComponent } from './components/to-array/to-array.component';
+import { CustomObservableComponent } from './components/custom-observable/custom-observable.component';
 
 
 const routes: Routes=[
@@ -28,6 +29,9 @@ const routes: Routes=[
   },
   {
     path:'toArray', component:ToArrayComponent
+  },
+  {
+    path:'custom-observ', component:CustomObservableComponent
   }
 ]
 
@@ -38,7 +42,8 @@ const routes: Routes=[
     FromEventComponent,
     IntervalComponent,
     OfFromComponent,
-    ToArrayComponent
+    ToArrayComponent,
+    CustomObservableComponent
   ],
   imports: [
     CommonModule,

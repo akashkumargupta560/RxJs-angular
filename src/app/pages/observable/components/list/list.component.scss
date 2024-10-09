@@ -1,9 +1,10 @@
 .list-page{
     .topic-list{
-        display: flex;
-        //justify-content: space-around;
-        column-gap: 20px;
-        //width: 100%;
+        display: grid;
+        gap: 16px;
+        padding: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      
         .card{
             .common-card{
                 .card-footer{

@@ -1,0 +1,34 @@
+<back-button label="Back"></back-button>
+
+<div class="custom-observable">
+    <h3>Custom Observable Page</h3>
+    <p>To create <strong>Custom Observable</strong></p>
+
+    <div class="custom-data">
+       <div class="">
+            <strong>Ex- 01 (Manual)</strong>
+            <hr>
+            <ul [ngClass]="techStatus == 'completed'? 'complete' : techStatus == 'error'? 'error' :''"
+            class="techList" id="elContainer"></ul>
+       </div>
+       <div class="">
+            <strong>Ex- 02 (Custom interval Observable)</strong>
+            <hr>
+            <ul class="techList">
+                <li>Angular</li>
+                <li>Reactjs</li>
+                <li>View.js</li>
+                <li>Laravel</li>
+            </ul>
+        </div>
+        <div class="">
+            <strong>Ex- 03 (Custom interval Observable)</strong>
+            <p class="data-view">
+                <strong>Random Name:</strong>'Anup','Shekhar','Sharma','Monu','Ravi','Jonson'
+            </p>
+            <hr>
+            <p>Current Name : <strong class="text-success">Anup</strong></p>
+            <span class="badge">Success!</span>
+        </div>
+    </div>
+</div>
