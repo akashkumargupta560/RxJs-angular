@@ -9,6 +9,7 @@ import { IntervalComponent } from './components/interval/interval.component';
 import { OfFromComponent } from './components/of-from/of-from.component';
 import { ToArrayComponent } from './components/to-array/to-array.component';
 import { CustomObservableComponent } from './components/custom-observable/custom-observable.component';
+import { MapComponent } from './components/map/map.component';
 
 
 const routes: Routes=[
@@ -32,7 +33,10 @@ const routes: Routes=[
   },
   {
     path:'custom-observ', component:CustomObservableComponent
-  }
+  },
+  {
+    path:'map', component:MapComponent
+  },
 ]
 
 @NgModule({
@@ -43,7 +47,8 @@ const routes: Routes=[
     IntervalComponent,
     OfFromComponent,
     ToArrayComponent,
-    CustomObservableComponent
+    CustomObservableComponent,
+    MapComponent,
   ],
   imports: [
     CommonModule,
