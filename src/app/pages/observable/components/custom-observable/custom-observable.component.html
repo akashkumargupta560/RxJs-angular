@@ -14,11 +14,12 @@
        <div class="">
             <strong>Ex- 02 (Custom interval Observable)</strong>
             <hr>
-            <ul class="techList">
-                <li>Angular</li>
+            <ul [ngClass]="techStatus2 == 'completed'? 'complete' : techStatus2 == 'error'? 'error' :''"
+            class="techList" id="elContaine2">
+                <!-- <li>Angular</li>
                 <li>Reactjs</li>
                 <li>View.js</li>
-                <li>Laravel</li>
+                <li>Laravel</li> -->
             </ul>
         </div>
         <div class="">
@@ -27,8 +28,10 @@
                 <strong>Random Name:</strong>'Anup','Shekhar','Sharma','Monu','Ravi','Jonson'
             </p>
             <hr>
-            <p>Current Name : <strong class="text-success">Anup</strong></p>
-            <span class="badge">Success!</span>
+            <p>Current Name : <strong class="text-success">{{names}}</strong></p>
+            <span class=""
+             [ngClass]="nameStatus == 'completed'? 'badge-success' : nameStatus == 'error'? 'badge-danger' : 'badge-primary'"
+            >{{nameStatus == 'completed'? 'Success' : nameStatus == 'error'? 'Error' : 'Running'}}!</span>
         </div>
     </div>
 </div>

@@ -36,10 +36,24 @@
         .text-success{
             color: green;
         }
-        .badge{
+        .badge-success{
             border: 1px solid rgb(30, 87, 30);
             padding: 0px 5px;
             background-color: #007000;
+            border-radius: 5px;
+            color: #fbfbfb;
+        }
+        .badge-danger{
+            border: 1px solid rgb(224, 48, 48);
+            padding: 0px 5px;
+            background-color: #700000;
+            border-radius: 5px;
+            color: #fbfbfb;
+        }
+        .badge-primary{
+            border: 1px solid rgb(48, 145, 224);
+            padding: 0px 5px;
+            background-color: #004370;
             border-radius: 5px;
             color: #fbfbfb;
         }
