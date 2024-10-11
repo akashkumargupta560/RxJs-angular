@@ -10,6 +10,7 @@ import { OfFromComponent } from './components/of-from/of-from.component';
 import { ToArrayComponent } from './components/to-array/to-array.component';
 import { CustomObservableComponent } from './components/custom-observable/custom-observable.component';
 import { MapComponent } from './components/map/map.component';
+import { PluckComponent } from './components/pluck/pluck.component';
 
 
 const routes: Routes=[
@@ -37,6 +38,9 @@ const routes: Routes=[
   {
     path:'map', component:MapComponent
   },
+  {
+    path:'pluck', component:PluckComponent
+  },
 ]
 
 @NgModule({
@@ -49,6 +53,7 @@ const routes: Routes=[
     ToArrayComponent,
     CustomObservableComponent,
     MapComponent,
+    PluckComponent,
   ],
   imports: [
     CommonModule,

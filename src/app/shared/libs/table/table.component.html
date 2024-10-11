@@ -2,12 +2,12 @@
     <table class="table">
         <thead>
           <tr>
-            <th *ngFor="let header of headers">{{ header }}</th>
+            <th *ngFor="let header of cols">{{ header.header }}</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let row of data" (click)="onRowClick(row)">
-            <td *ngFor="let column of headers">{{ row[column] }}</td>
+            <td *ngFor="let column of cols">{{ row[column.columns] }}</td>
           </tr>
         </tbody>
       </table>

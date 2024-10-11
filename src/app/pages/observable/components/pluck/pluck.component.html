@@ -1,0 +1,60 @@
+<back-button label="Back"></back-button>
+
+<div class="pluck-page">
+    <h3>Pluck Operator (Observable) Page</h3>
+    <p>To create <strong>Pluck Operator</strong></p>
+    <div class="pluck-data">
+        <div class="">
+            <strong>Ex- 01</strong>
+            <hr>
+            <p class="data-view">
+                <strong>Pluck:-</strong> By Property
+            </p>
+            <br>
+            <!-- <web-table [cols]="tableHeaders" [data]="userData" (rowClick)="handleRowClick($event)">
+            </web-table> -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of userData">
+                        <td>{{data}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- <p>Message:-<strong class="text-success"></strong></p> -->
+        </div>
+        <div class="">
+            <strong>Ex- 02 </strong>
+            <hr>
+            <p class="data-view">
+                <strong>Pluck:-</strong> By Nasted Property
+            </p>
+            <br>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Job > Title</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of userData2">
+                        <td>{{data}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="">
+            <strong>Ex- 03</strong>
+            <hr>
+            <p class="data-view">
+                <strong>Pluck:-</strong> Pluck Object Data
+            </p>
+            <br>
+            <ul class="techList" id="elContainer"></ul>
+        </div>
+    </div>
+</div>
