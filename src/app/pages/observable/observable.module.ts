@@ -12,6 +12,7 @@ import { CustomObservableComponent } from './components/custom-observable/custom
 import { MapComponent } from './components/map/map.component';
 import { PluckComponent } from './components/pluck/pluck.component';
 import { FilterComponent } from './components/filter/filter.component';
+import { TapComponent } from './components/tap/tap.component';
 
 const routes: Routes=[
   {
@@ -44,6 +45,9 @@ const routes: Routes=[
   {
     path:'filter', component:FilterComponent
   },
+  {
+    path:'tap', component:TapComponent
+  },
 ]
 
 @NgModule({
@@ -58,6 +62,7 @@ const routes: Routes=[
     MapComponent,
     PluckComponent,
     FilterComponent,
+    TapComponent,
   ],
   imports: [
     CommonModule,
