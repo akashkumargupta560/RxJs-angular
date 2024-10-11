@@ -11,7 +11,7 @@ import { ToArrayComponent } from './components/to-array/to-array.component';
 import { CustomObservableComponent } from './components/custom-observable/custom-observable.component';
 import { MapComponent } from './components/map/map.component';
 import { PluckComponent } from './components/pluck/pluck.component';
-
+import { FilterComponent } from './components/filter/filter.component';
 
 const routes: Routes=[
   {
@@ -41,6 +41,9 @@ const routes: Routes=[
   {
     path:'pluck', component:PluckComponent
   },
+  {
+    path:'filter', component:FilterComponent
+  },
 ]
 
 @NgModule({
@@ -54,6 +57,7 @@ const routes: Routes=[
     CustomObservableComponent,
     MapComponent,
     PluckComponent,
+    FilterComponent,
   ],
   imports: [
     CommonModule,

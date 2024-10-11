@@ -1,0 +1,80 @@
+<back-button label="Back"></back-button>
+
+<div class="filter-page">
+    <h3>Filter Operator (Observable) Page</h3>
+    <p>To create <strong>Filter Operator</strong></p>
+    <div class="filter-data">
+        <div class="">
+            <strong>Ex- 01</strong>
+            <hr>
+            <p class="data-view">
+                <strong>Filter:-</strong> Filter By Length
+            </p>
+            <br>
+            <!-- <web-table [cols]="tableHeaders" [data]="userData" (rowClick)="handleRowClick($event)">
+            </web-table> -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of userData">
+                        <td>{{data.id}}</td>
+                        <td>{{data.name}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="">
+            <strong>Ex- 02 </strong>
+            <hr>
+            <p class="data-view">
+                <strong>Filter:-</strong> Filter By Gender
+            </p>
+            <br>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Gender</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of userData2">
+                        <td>{{data.id}}</td>
+                        <td>{{data.name}}</td>
+                        <td>{{data.gender}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="">
+            <strong>Ex- 03</strong>
+            <hr>
+            <p class="data-view">
+                <strong>Filter:-</strong> Filter By nth Item
+            </p>
+            <br>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Gender</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of userData3">
+                        <td>{{data.id}}</td>
+                        <td>{{data.name}}</td>
+                        <td>{{data.gender}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
