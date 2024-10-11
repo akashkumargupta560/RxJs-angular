@@ -13,6 +13,7 @@ import { MapComponent } from './components/map/map.component';
 import { PluckComponent } from './components/pluck/pluck.component';
 import { FilterComponent } from './components/filter/filter.component';
 import { TapComponent } from './components/tap/tap.component';
+import { TakeComponent } from './components/take/take.component';
 
 const routes: Routes=[
   {
@@ -48,6 +49,9 @@ const routes: Routes=[
   {
     path:'tap', component:TapComponent
   },
+  {
+    path:'take', component:TakeComponent
+  },
 ]
 
 @NgModule({
@@ -63,6 +67,7 @@ const routes: Routes=[
     PluckComponent,
     FilterComponent,
     TapComponent,
+    TakeComponent,
   ],
   imports: [
     CommonModule,
