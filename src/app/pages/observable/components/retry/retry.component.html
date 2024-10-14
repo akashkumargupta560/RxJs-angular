@@ -1,4 +1,4 @@
-<back-button label="Back"></back-button>
+<back-button label="Back" class="buttonClass"></back-button>
 <div class="retry-page">
     <h3>Retry, RetryWhen, Scan and Delay Operator (Observable) Page</h3>
     <p>To create <strong>Take, TakeLast and TakeUntil Operator</strong></p>
@@ -32,7 +32,20 @@
                     </tr>
                 </tbody>
             </table>
-            <button class="btn" (click)="fetchDetails()">Person-Details</button>
+            <!-- <button class="btns " (click)="fetchDetails()">Person-Details</button> -->
+            <button class="btn btn-primary" (click)="fetchDetails()" type="button">
+                <span *ngIf="fetchingData" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                <!-- <span role="status">Person-Details...</span> -->
+                {{fetchingData ? 'fetching....':'Person-Details'}}
+            </button><br><br>
+
+            <span>Status:-
+                <strong [ngClass]="{
+                'text-success':status=='Data Fetched!', 
+                'text-danger':status=='Problem Fetching Data!'
+                }">{{status}}
+               </strong>
+            </span>
         </div>
         <div class="">
             <strong>Ex- 02</strong>

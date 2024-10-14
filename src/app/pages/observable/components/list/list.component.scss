@@ -5,15 +5,22 @@
         padding: 20px;
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       
-        .card{
+        .cards{
             .common-card{
                 .card-footer{
-                    button{
+                    .btns{
                         display: none !important;
                     }
                 }
             }
             
+        }
+        .btns{
+            padding: 0px 5px;
+            font-size: 13px;
+            border-radius: 8px;
+            color: white;
+            background-color: cornflowerblue;
         }
     }
 }

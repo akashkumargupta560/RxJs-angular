@@ -8,8 +8,8 @@ import {Location} from '@angular/common';
 })
 export class ButtonComponent {
   
- 
   @Input() label: string | undefined; // Accept a label from the parent
+  @Input() buttonClass: string | undefined; // Accept a button class from the parent
   @Output() onClick = new EventEmitter<any>(); // Emit an event on click
 
   constructor(private route:Router,private _location: Location) {}
