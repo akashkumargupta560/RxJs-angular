@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -21,4 +22,14 @@ export class RxjsService {
     //   containers[i].appendChild(el.cloneNode(true)); // Use cloneNode to create a new instance
     // }
    }
+   private loadingSubject = new BehaviorSubject<boolean>(false);
+  loading$ = this.loadingSubject.asObservable();
+
+  start() {
+    this.loadingSubject.next(true);
+  }
+
+  stop() {
+    this.loadingSubject.next(false);
+  }
 }

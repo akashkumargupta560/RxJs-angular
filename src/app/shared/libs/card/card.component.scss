@@ -12,14 +12,18 @@
         padding: 15px 15px;
         .card-headers {
             font-size: 1em;
+            font-weight: bold;
           }
           .card-footer {
             text-align: center;
         }
+        // .card-body{
+        //     cursor: pointer;
+        // }
     }
  
 }
-.card:hover{
+.cards:hover{
     background-color: #e3cbc8;
     border-radius: 10px;
 }

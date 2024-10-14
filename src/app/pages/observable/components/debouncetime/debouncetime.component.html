@@ -1,0 +1,34 @@
+<back-button label="Back"></back-button>
+<div class="debounce-page">
+    <h3>DebounceTime and DistictUntilChanged Operator (Observable) Page</h3>
+    <p>To create <strong>DebounceTime and DistictUntilChanged Operator</strong></p>
+
+    <div class="debounce-section">
+        <div class="">
+            <strong>Ex- 01</strong>
+            <hr>
+            <p class="data-view">
+                <strong>DebounceTime:-</strong> 
+            </p>
+            <!-- <br> -->
+            <div class="debounce">
+                <label>Search</label>
+                <input type="text" #myInput class="form-control" placeholder="Searching......."/>
+            </div>
+            <span *ngIf="reqData != null">Requested Data:-<strong>{{reqData}}</strong></span>
+        </div>
+        <div class="">
+            <strong>Ex- 02</strong>
+            <hr>
+            <p class="data-view">
+                <strong>DistictUntilChanged:-</strong> 
+            </p>
+            <!-- <br> -->
+            <div class="debounce">
+                <label>Search</label>
+                <input type="text" #myInput2 class="form-control" placeholder="Searching......."/>
+            </div>
+            <span *ngIf="reqData != null">Requested Data:-<strong>{{reqData2}}</strong></span>
+        </div>
+    </div>
+</div>
