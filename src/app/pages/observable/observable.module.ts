@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ObservableComponent } from './observable.component';
 import { Routes, RouterModule } from '@angular/router';
@@ -16,6 +16,10 @@ import { TapComponent } from './components/tap/tap.component';
 import { TakeComponent } from './components/take/take.component';
 import { RetryComponent } from './components/retry/retry.component';
 import { DebouncetimeComponent } from './components/debouncetime/debouncetime.component';
+import { SubjectComponent } from './components/subject/subject.component';
+import { Comp1Component } from '../components/comp1/comp1.component';
+import { Comp2Component } from '../components/comp2/comp2.component';
+import { Comp3Component } from '../components/comp3/comp3.component';
 
 const routes: Routes=[
   {
@@ -60,6 +64,9 @@ const routes: Routes=[
   {
     path:'debounce-time', component:DebouncetimeComponent
   },
+  {
+    path:'subject', component:SubjectComponent
+  },
 ]
 
 @NgModule({
@@ -78,11 +85,16 @@ const routes: Routes=[
     TakeComponent,
     RetryComponent,
     DebouncetimeComponent,
+    SubjectComponent,
+    Comp1Component,
+    Comp2Component,
+    Comp3Component,
   ],
   imports: [
     CommonModule,
     SharedModule,
+    // CoresModule,
     RouterModule.forChild(routes)
-  ]
+  ],
 })
 export class ObservableModule { }

@@ -1,0 +1,13 @@
+.subject-page{
+    .usename{
+        border: 1px solid green;
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: lightblue;
+    }
+    .card-list{
+        display: flex;
+        column-gap: 200px;
+        margin-left: 100px;
+    }
+}

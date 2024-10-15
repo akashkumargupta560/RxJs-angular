@@ -1,11 +1,14 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RxjsService {
-
+   value = new Observable()
+  exclusive = new Subject<boolean>();
+  // userName = new Subject<any>();
+  userName = new BehaviorSubject<any>('Akash');
   constructor() { }
 
   printData(val:any, containerId:any){
@@ -22,14 +25,16 @@ export class RxjsService {
     //   containers[i].appendChild(el.cloneNode(true)); // Use cloneNode to create a new instance
     // }
    }
+   // for Loading
+   
    private loadingSubject = new BehaviorSubject<boolean>(false);
-  loading$ = this.loadingSubject.asObservable();
+   loading$ = this.loadingSubject.asObservable();
 
-  start() {
-    this.loadingSubject.next(true);
-  }
+    start() {
+      this.loadingSubject.next(true);
+    }
 
-  stop() {
-    this.loadingSubject.next(false);
-  }
+    stop() {
+      this.loadingSubject.next(false);
+    }
 }

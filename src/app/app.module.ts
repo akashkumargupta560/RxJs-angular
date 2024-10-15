@@ -15,7 +15,6 @@ import { SharedModule } from './shared/shared.module';
 
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,10 +30,10 @@ import { SharedModule } from './shared/shared.module';
     ProfileModule,
     ObservableModule,
     PromiseModule,
-    CoresModule,
+    // CoresModule,
     
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
