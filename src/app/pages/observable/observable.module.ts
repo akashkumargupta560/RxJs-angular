@@ -20,6 +20,7 @@ import { SubjectComponent } from './components/subject/subject.component';
 import { Comp1Component } from '../components/comp1/comp1.component';
 import { Comp2Component } from '../components/comp2/comp2.component';
 import { Comp3Component } from '../components/comp3/comp3.component';
+import { ReplaySubjectComponent } from './components/replay-subject/replay-subject.component';
 
 const routes: Routes=[
   {
@@ -67,6 +68,9 @@ const routes: Routes=[
   {
     path:'subject', component:SubjectComponent
   },
+  {
+    path:'replay-subject', component:ReplaySubjectComponent
+  },
 ]
 
 @NgModule({
@@ -89,6 +93,7 @@ const routes: Routes=[
     Comp1Component,
     Comp2Component,
     Comp3Component,
+    ReplaySubjectComponent,
   ],
   imports: [
     CommonModule,

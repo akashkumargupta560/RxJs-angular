@@ -1,0 +1,47 @@
+<back-button label="Back" class="buttonClass"></back-button>
+<div class="replay-subject-page">
+    <h3>Replay and replaySubject Operator (Observable) Page</h3>
+    <p>To create <strong>Replay and replaySubject Operator</strong></p>
+    <h4>{{methodInterval?'Interval Started' : 'Add Content(Data)'}}</h4>
+    <div class="btn-toggle">
+        <button class="toggle-btn" (click)="toggleMethod()">Toggle</button>
+    </div><br><br>
+   
+    <hr>
+    <div class="input-field" *ngIf="!methodInterval">
+        <input type="text" class="form-control" placeholder="" #vedios />&nbsp;
+        <button type="button" class="btn-group" (click)="addVedios(vedios.value)">Add Data</button>
+    </div>
+
+    <hr *ngIf="!methodInterval">
+
+    <div class="data-list">
+        <div class="data-display">
+            <strong>User:-1</strong>
+            <hr>
+            <ul>
+                <li *ngFor="let data of user1List"><strong>User:</strong>{{data}}</li>
+            </ul>
+        </div>
+        <div class="data-display">
+            <strong>User:-2</strong>
+            <hr>
+            <ul>
+                <li *ngFor="let data of user2List"><strong>User:</strong>{{data}}</li>
+
+                <button class="btns" [ngClass]="subscribe2Modes? 'btn-danger':'btn-success' "
+                    (click)="user2Subscribe()">{{subscribe2Modes? 'Unsubscribe':'Subscribe'}}</button>
+            </ul>
+        </div>
+        <div class="data-display">
+            <strong>User:-3</strong>
+            <hr>
+            <ul>
+                <li *ngFor="let data of user3List"><strong>User:</strong>{{data}}</li>
+
+               <button class="btns" [ngClass]="subscribe3Modes? 'btn-danger':'btn-success' "
+                    (click)="user3Subscribe()">{{subscribe3Modes? 'Unsubscribe':'Subscribe'}}</button>
+            </ul>
+        </div>
+    </div>
+</div>

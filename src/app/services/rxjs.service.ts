@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, Subject } from 'rxjs';
+import { BehaviorSubject, Observable, ReplaySubject, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RxjsService {
-   value = new Observable()
+  value = new Observable()
   exclusive = new Subject<boolean>();
   // userName = new Subject<any>();
   userName = new BehaviorSubject<any>('Akash');
+  vedioEmit = new ReplaySubject<any>(3,5000)
   constructor() { }
 
   printData(val:any, containerId:any){
