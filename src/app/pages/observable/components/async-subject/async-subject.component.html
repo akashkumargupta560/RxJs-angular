@@ -1,0 +1,33 @@
+<back-button label="Back" class="buttonClass"></back-button>
+<div class="replay-subject-page">
+    <h3>AsyncSubject Operator (Observable) Page</h3>
+    <p>To create <strong>AsyncSubject Operator</strong></p>
+    <h4>Add Content(Data)</h4>
+  <div class="" ng-app="" ng-init="firstName='akash';lastName='gupta';">
+    <p>Full-Name:-{{firstName +''+ lastName}}</p>
+  </div>
+    <hr>
+    <div class="input-field">
+        <input type="text" class="form-control" placeholder="" #vedios />&nbsp;
+        <button type="button" class="btn-group">Add Data</button>
+    </div>
+
+    <hr>
+
+    <div class="data-list">
+        <div class="data-display">
+            <strong>User:-1</strong>
+            <hr>
+            <ul>
+                <li *ngFor="let data of user1List"><strong>User:</strong>{{data}}</li>
+            </ul>
+        </div>
+        <div class="data-display">
+            <strong>User:-2</strong>
+            <hr>
+
+            <button class="btns" [ngClass]="subscribe2Modes? 'btn-danger':'btn-success' "
+                (click)="user2Subscribe()">{{subscribe2Modes? 'Unsubscribe':'Subscribe'}}</button>
+        </div>
+    </div>
+</div>
